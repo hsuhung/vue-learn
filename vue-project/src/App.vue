@@ -15,6 +15,7 @@
         <li><router-link to="./vue06">todoList实现之本地存储</router-link></li>
         <li><router-link to="./vue07">组件生命周期、组件挂载与卸载</router-link></li>
         <li><router-link to="./vue08">resource、axios数据请求</router-link></li>
+        <li><router-link to="./vue09">父子组件传值</router-link></li>
 
         <li><router-link to="./remark">说明</router-link></li>
       </ol>

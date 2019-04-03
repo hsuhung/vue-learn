@@ -37,6 +37,20 @@
       <hr />
 
       <h4>预加载数据</h4>
+      <ul>
+        <li v-for="value in list">{{value.title}}</li>
+      </ul>
+
+
+      <button @click="resourceGetData()">resource请求数据</button>
+      <ul>
+        <li v-for="value in resourceList">{{value.title}}</li>
+      </ul>
+
+      <button @click="axiosGetData()">axios请求数据</button>
+      <ul>
+        <li v-for="value in axiosList">{{value.title}}</li>
+      </ul>
 
 
     </div>
@@ -51,11 +65,13 @@
         data() {
           return {
             api: "http://www.phonegap100.com/appapi.php?a=getPortalList&catid=20&page=1",
-            list: []
+            list: [],
+            resourceList: [],
+            axiosList: []
           }
         },
       methods: {
-        resourceGetData() {// resource请求
+        mountedGetData() {// resource请求
           // this.$http.get()请求数据，then()为返回结果，分执行成功和失败
           this.$http.get(this.api).then(function (response) {
             // 成功
@@ -65,10 +81,31 @@
             // 失败
             console.log(err)
           })
+        },
+        resourceGetData() {// resource请求
+          // this.$http.get(this.api)请求数据，then()为返回结果，分执行成功和失败
+          this.$http.get(this.api).then(function (response) {
+            // 成功
+            console.log(response)
+            this.resourceList = response.body.result
+          }, function (err) {
+            // 失败
+            console.log(err)
+          })
+        },
+        axiosGetData() {
+          //Axios.get(this.api)请求数据
+          Axios.get(this.api).then((response)=> {
+            console.log(response)
+            this.axiosList = response.data.result
+          }).catch((err)=> {
+            console.log(err)
+          })
         }
       },
       mounted() {
-
+          // 预加载数据
+        this.mountedGetData()
       }
     }
 </script>
