@@ -20,7 +20,7 @@
         // 数据接收，验证数据类型
         props: {
           "parentMsg": String,
-          "parentFunc": Object
+          "parentFunc": Function
         }
     }
 </script>

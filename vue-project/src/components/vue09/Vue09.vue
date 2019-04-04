@@ -1,7 +1,7 @@
 <template>
     <div>
 
-      <h3>父子组件传值</h3>
+      <h3>父组件传递数据到子组件</h3>
 
       <hr />
 
@@ -21,7 +21,9 @@
     export default {
         name: "Vue09",
         data() {
-          return undefined;
+          return {
+
+          }
         },
         components: {
           //组件注册

@@ -19,6 +19,8 @@ import Vue06 from "../components/vue06/Vue06.vue"
 import Vue07 from "../components/vue07/Vue07.vue"
 import Vue08 from "../components/vue08/Vue08.vue"
 import Vue09 from "../components/vue09/Vue09.vue"
+import Vue10 from "../components/vue10/Vue10.vue"
+import Vue11 from "../components/vue11/Vue11.vue"
 
 
 // 路由路径配置
@@ -33,6 +35,8 @@ const routes = [
   {path: "/vue07", component: Vue07},
   {path: "/vue08", component: Vue08},
   {path: "/vue09", component: Vue09},
+  {path: "/vue10", component: Vue10},
+  {path: "/vue11", component: Vue11},
 
   // 默认路由
   {path: "*", component: Vue01},
