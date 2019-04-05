@@ -21,6 +21,7 @@
         <li><router-link to="/vue12_home">路由</router-link></li>
         <li><router-link to="/vue13_home">动态路由</router-link></li>
         <li><router-link to="/vue14_home">移动端样式、路由传值</router-link></li>
+        <li><router-link to="/vue15_home">VueX不同组件共享数据</router-link></li>
 
 
 

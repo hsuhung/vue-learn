@@ -1,11 +1,13 @@
 /*路由配置*/
 
-// 导入vue、vue-router
+// 导入vue、vue-router、vuex
 import Vue from "vue"
 import VueRouter from "vue-router"
+import VueX from "vuex"
 
-// 使用vue-router
+// 使用vue-router、vuex
 Vue.use(VueRouter)
+Vue.use(VueX)
 
 
 // 引入模板组件
@@ -40,6 +42,10 @@ import Vue14 from "../components/vue14/Vue14.vue"
     import Vue14_Product from "../components/vue14/components/Product.vue"
     import Vue14_Content from "../components/vue14/components/Content.vue"
 
+import Vue15 from "../components/vue15/Vue15.vue"
+    import Vue15_Home from "../components/vue15/components/Home.vue"
+    import Vue15_News from "../components/vue15/components/News.vue"
+
 
 // 路由路径配置
 const routes = [
@@ -70,6 +76,10 @@ const routes = [
       {path: "/vue14_news", component: Vue14_News},
       {path: "/vue14_product", component: Vue14_Product},//get传值  使用this.$route.query取数据
       {path: "/vue14_content/:newsId", component: Vue14_Content, name: "vue14_newsInfo"}//动态路由  使用this.$route.params取数据
+    ]},
+  {path: "/vue15", component: Vue15, children: [//子组件路由配置
+      {path: "/vue15_home", component: Vue15_Home},
+      {path: "/vue15_news", component: Vue15_News},
     ]},
 
   // 默认路由
