@@ -18,8 +18,9 @@
         <li><router-link to="./vue09">父组件传递数据到子组件</router-link></li>
         <li><router-link to="./vue10">父子组件相互取数据</router-link></li>
         <li><router-link to="./vue11">非父子组件间传递数据</router-link></li>
-        <li><router-link to="/vue12">路由</router-link></li>
-        <li><router-link to="/vue13">动态路由</router-link></li>
+        <li><router-link to="/vue12_home">路由</router-link></li>
+        <li><router-link to="/vue13_home">动态路由</router-link></li>
+        <li><router-link to="/vue14_home">移动端样式、路由传值</router-link></li>
 
 
 

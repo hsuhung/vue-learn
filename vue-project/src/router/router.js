@@ -34,6 +34,12 @@ import Vue13 from "../components/vue13/Vue13.vue"
     import Vue13_Product from "../components/vue13/components/Product.vue"
     import Vue13_Content from "../components/vue13/components/Content.vue"
 
+import Vue14 from "../components/vue14/Vue14.vue"
+    import Vue14_Home from "../components/vue14/components/Home.vue"
+    import Vue14_News from "../components/vue14/components/News.vue"
+    import Vue14_Product from "../components/vue14/components/Product.vue"
+    import Vue14_Content from "../components/vue14/components/Content.vue"
+
 
 // 路由路径配置
 const routes = [
@@ -58,6 +64,12 @@ const routes = [
       {path: "/vue13_news", component: Vue13_News},
       {path: "/vue13_product", component: Vue13_Product},//get传值  使用this.$route.query取数据
       {path: "/vue13_content/:newsId", component: Vue13_Content}//动态路由  使用this.$route.params取数据
+    ]},
+  {path: "/vue14", component: Vue14, children: [//子组件路由配置
+      {path: "/vue14_home", component: Vue14_Home},
+      {path: "/vue14_news", component: Vue14_News},
+      {path: "/vue14_product", component: Vue14_Product},//get传值  使用this.$route.query取数据
+      {path: "/vue14_content/:newsId", component: Vue14_Content, name: "vue14_newsInfo"}//动态路由  使用this.$route.params取数据
     ]},
 
   // 默认路由
