@@ -1,7 +1,7 @@
 <template>
   <div>
 
-  <h4>首页页面</h4>
+  <h4>新闻页面</h4>
 
   <!--读取store中的数据：this.$store.state.数据-->
   <div>数据值：{{this.$store.state.count}}</div>
@@ -26,8 +26,8 @@
         store,// 注册store
         methods: {
           changeCount() {
-            // 调用方法
-            this.$store.mutations.incCount('incCount')// 触发方法incCount
+            // 调用方法 this.$store.commit('方法名')
+            this.$store.commit('incCount')// 触发方法incCount
           }
         }
     }

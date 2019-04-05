@@ -26,8 +26,8 @@
         store,// 注册store
         methods: {
           changeCount() {
-            // 调用方法
-            this.$store.mutations.incCount('incCount')// 触发方法incCount
+            // 调用方法 this.$store.commit('方法名')
+            this.$store.commit('incCount')// 触发方法incCount
           }
         }
     }
