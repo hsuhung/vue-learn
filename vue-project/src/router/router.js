@@ -20,7 +20,19 @@ import Vue07 from "../components/vue07/Vue07.vue"
 import Vue08 from "../components/vue08/Vue08.vue"
 import Vue09 from "../components/vue09/Vue09.vue"
 import Vue10 from "../components/vue10/Vue10.vue"
+
 import Vue11 from "../components/vue11/Vue11.vue"
+
+import Vue12 from "../components/vue12/Vue12.vue"
+    //子组件；推荐子组件开头使用缩进，便于阅读
+    import Vue12_Home from "../components/vue12/components/Home.vue"
+    import Vue12_News from "../components/vue12/components/News.vue"
+
+import Vue13 from "../components/vue13/Vue13.vue"
+    import Vue13_Home from "../components/vue13/components/Home.vue"
+    import Vue13_News from "../components/vue13/components/News.vue"
+    import Vue13_Product from "../components/vue13/components/Product.vue"
+    import Vue13_Content from "../components/vue13/components/Content.vue"
 
 
 // 路由路径配置
@@ -37,6 +49,16 @@ const routes = [
   {path: "/vue09", component: Vue09},
   {path: "/vue10", component: Vue10},
   {path: "/vue11", component: Vue11},
+  {path: "/vue12", component: Vue12, children: [//子组件路由配置
+      {path: "/vue12_home", component: Vue12_Home},
+      {path: "/vue12_news", component: Vue12_News}
+    ]},
+  {path: "/vue13", component: Vue13, children: [//子组件路由配置
+      {path: "/vue13_home", component: Vue13_Home},
+      {path: "/vue13_news", component: Vue13_News},
+      {path: "/vue13_product", component: Vue13_Product},//get传值  使用this.$route.query取数据
+      {path: "/vue13_content/:newsId", component: Vue13_Content}//动态路由  使用this.$route.params取数据
+    ]},
 
   // 默认路由
   {path: "*", component: Vue01},
@@ -48,7 +70,8 @@ const routes = [
 // 实例化
 const router = new VueRouter({
   //相当于routes:routes
-  routes
+  routes,
+  mode: "history" //hash模式改为history模式；可以去除地址中的#号
 })
 
 
